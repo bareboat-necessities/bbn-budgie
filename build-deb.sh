@@ -26,6 +26,7 @@ patch -p0 --verbose --force < ../Replace_na-tray_with_carbontray_1998.patch || t
 cp ../src/applets/tray/TrayApplet.vala src/applets/tray/TrayApplet.vala
 cp ../src/applets/tray/carbontray/child.c src/applets/tray/carbontray/child.c
 cp ../src/applets/tray/carbontray/tray.c src/applets/tray/carbontray/tray.c
+rm -f src/imports/natray/natray-1.0.vapi
 cp ../debian/changelog debian/changelog
 
 EDITOR=/bin/true dpkg-source -q --commit . Replace_na_tray_with_carbontray_patch
