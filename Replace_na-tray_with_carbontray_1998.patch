@@ -4092,4 +4092,10 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
  subdir('theme')
  subdir('lib')
  subdir('raven')
+diff --git src/imports/natray/natray-1.0.vapi src/imports/natray/natray-1.0.vapi
+deleted file mode 100644
+index 9370e3f94bc9a4564d875e1221549c6a1c840d74..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
 
