@@ -25,6 +25,7 @@ xzcat ../budgie-desktop_10.5-1.debian.tar.xz | tar xvf -
 patch -p0 --verbose --force < ../Replace_na-tray_with_carbontray_1998.patch || true
 cp ../src/applets/tray/TrayApplet.vala src/applets/tray/TrayApplet.vala
 
+EDITOR=/bin/true dpkg-source -q --commit . Replace_na_tray_with_carbontray_patch
 debuild -us -uc
 
 cd ..
