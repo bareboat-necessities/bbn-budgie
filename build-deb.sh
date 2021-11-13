@@ -22,7 +22,7 @@ cd budgie-desktop-10.5/
 
 xzcat ../budgie-desktop_10.5-1.debian.tar.xz | tar xvf -
 
-patch < ../Replace_na-tray_with_carbontray_1998.patch
+patch --verbose --force < ../Replace_na-tray_with_carbontray_1998.patch
 
 debuild -us -uc
 
