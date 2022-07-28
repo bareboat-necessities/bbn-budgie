@@ -23,7 +23,7 @@ cd budgie-desktop-10.6.2/
 xzcat ../budgie-desktop_10.6.2-1.debian.tar.xz | tar xvf -
 
 
-debuild -eDEB_BUILD_OPTIONS="parallel=8" -us -uc
+dpkg-buildpackage -uc -us -j8
 
 cd ..
 
