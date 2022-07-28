@@ -13,24 +13,17 @@ apt-get -y install devscripts build-essential lintian \
    gnome-settings-daemon-dev sassc libnotify-dev \
    libpulse-dev libpulse-mainloop-glib0 libibus-1.0-dev meson libasound2-dev
 
-wget http://deb.debian.org/debian/pool/main/b/budgie-desktop/budgie-desktop_10.5.orig.tar.xz
-wget http://deb.debian.org/debian/pool/main/b/budgie-desktop/budgie-desktop_10.5-1.debian.tar.xz
+wget http://deb.debian.org/debian/pool/main/b/budgie-desktop/budgie-desktop_10.6.2.orig.tar.xz
+wget http://deb.debian.org/debian/pool/main/b/budgie-desktop/budgie-desktop_10.6.2-1.debian.tar.xz
 
-xzcat budgie-desktop_10.5.orig.tar.xz | tar xvf -
+xzcat budgie-desktop_10.6.2.orig.tar.xz | tar xvf -
 
-cd budgie-desktop-10.5/
+cd budgie-desktop-10.6.2/
 
-xzcat ../budgie-desktop_10.5-1.debian.tar.xz | tar xvf -
+xzcat ../budgie-desktop_10.6.2-1.debian.tar.xz | tar xvf -
 
-patch -p0 --verbose --force < ../Replace_na-tray_with_carbontray_1998.patch || true
-cp ../src/applets/tray/TrayApplet.vala src/applets/tray/TrayApplet.vala
-cp ../src/applets/tray/carbontray/child.c src/applets/tray/carbontray/child.c
-cp ../src/applets/tray/carbontray/tray.c src/applets/tray/carbontray/tray.c
-rm -f src/imports/natray/natray-1.0.vapi
-cp ../debian/changelog debian/changelog
 
-EDITOR=/bin/true dpkg-source -q --commit . Replace_na_tray_with_carbontray_patch
-debuild -us -uc
+debuild -eDEB_BUILD_OPTIONS="parallel=8" -us -uc
 
 cd ..
 
