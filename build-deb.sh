@@ -22,6 +22,7 @@ cd budgie-desktop-10.6.2/
 
 xzcat ../budgie-desktop_10.6.2-1.debian.tar.xz | tar xvf -
 
+cp ../debian/changelog debian/changelog
 
 dpkg-buildpackage -uc -us -j8
 
