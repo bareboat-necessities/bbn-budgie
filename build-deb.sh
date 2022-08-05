@@ -29,7 +29,7 @@ xzcat ../budgie-desktop_10.5.3-5.debian.tar.xz | tar xvf -
 
 #cp ../debian/control debian/control
 
-dpkg-buildpackage -uc -us -j8
+dpkg-buildpackage -uc -us -j8 -d
 
 cd ..
 
