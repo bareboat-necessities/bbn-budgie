@@ -35,3 +35,18 @@ cd ..
 
 rm ./*dbgsym*.deb
 
+##############################
+
+wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/zenity/4.0.1-1/zenity_4.0.1.orig.tar.xz
+wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/zenity/4.0.1-1/zenity_4.0.1-1.debian.tar.xz
+
+xzcat zenity_4.0.1.orig.tar.xz | tar xvf -
+cd zenity-4.0.1/
+xzcat ../zenity_4.0.1-1.debian.tar.xz | tar xvf -
+
+dpkg-buildpackage -uc -us -j8 -d
+
+cd ..
+
+rm ./*dbgsym*.deb
+
