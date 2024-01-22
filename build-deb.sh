@@ -37,6 +37,8 @@ rm ./*dbgsym*.deb
 
 ##############################
 
+apt-get -y install gnome-pkg-tools
+
 wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/zenity/4.0.1-1/zenity_4.0.1.orig.tar.xz
 wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/zenity/4.0.1-1/zenity_4.0.1-1.debian.tar.xz
 
