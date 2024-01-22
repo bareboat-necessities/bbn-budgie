@@ -25,7 +25,7 @@ wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/budgie-desktop/1
 
 xzcat budgie-desktop_10.8.2.orig.tar.xz | tar xvf -
 cd budgie-desktop-10.8.2/
-xzcat ../budgie-desktop_10.8.2-2ubuntu1.tar.xz | tar xvf -
+xzcat ../budgie-desktop_10.8.2-2ubuntu1.debian.tar.xz | tar xvf -
 
 #cp ../debian/control debian/control
 
